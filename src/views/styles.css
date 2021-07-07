@@ -1,0 +1,181 @@
+/* ------------------------------------------------------------------------- */
+/* General */
+
+.card-container:hover .card-body {
+  transform: rotateY(180deg);
+}
+
+p,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+.blue-background {
+  background-color: #027db4;
+}
+
+.small-font {
+  font-size: 15px;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Intro/Conclusion */
+
+.info-card {
+  max-width: 840px;
+  margin: auto;
+}
+
+.introduction {
+  background-color: #015478;
+}
+
+.conclusion {
+  background-color: #70b603;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Flip Cards Container */
+
+@media (min-width: 750px) {
+  .deck {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.5rem;
+    max-width: 800px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 750px) {
+  .deck {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0.5rem;
+  }
+}
+
+/* ------------------------------------------------------------------------- */
+/* Flip Cards */
+
+.card {
+  height: 260px;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* Front */
+
+.img-front {
+  background-color: rgb(238, 238, 238);
+  border-radius: 100px;
+  padding: 30px;
+}
+
+.front-header {
+  padding: 5px;
+  margin: 2px;
+  text-align: center;
+  color: white;
+}
+
+.front-enabled {
+  background: #015478;
+}
+
+.front-disabled {
+  background: #7a7a7a;
+}
+
+/* Back */
+
+hr {
+  border-top: 2px dotted rgb(255, 255, 255);
+  margin-left: 5% !important;
+  margin-right: 5% !important;
+  margin: 0;
+  padding: 0;
+}
+
+.img-back {
+  background-color: rgb(255, 255, 255);
+  border-radius: 100px;
+  padding: 20px;
+}
+
+.corner-triangle {
+  width: 0px;
+  height: 0px;
+  border-bottom: 50px solid #015478;
+  border-left: 50px solid transparent;
+  bottom: 2px;
+  right: 2px;
+  position: absolute;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Flip Animation */
+
+.flip-container {
+  perspective: 1000px;
+}
+
+.flip-container .selected .flipper,
+.flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+  height: 260px;
+  width: 100%;
+}
+
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
