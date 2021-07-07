@@ -65,7 +65,7 @@ const FlipCard = ({ flipCard, active, setActive }: Card) => {
         <div className="flip-container">
             <div className={`${isFlipped ? "" : "selected"}`}>
                 <div className="flipper">
-                    <div className={`card ${isFlipped ? "" : "blue-background flipped"}`} onClick={() => handleClick()}>
+                    <div className={`card ${isFlipped ? "" : "blue-background"}`} onClick={() => handleClick()}>
                         <div className="front">
                             {renderCompletionIndicator()}
                             {renderFront()}
