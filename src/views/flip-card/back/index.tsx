@@ -11,6 +11,6 @@ const BackCard = ({ title, description, asset }: Models.Back) => {
             <img className="img-back center mt-3" src={asset} alt={asset}  width="110" height="110" />
         </>
     );
-}
+};
 
 export default BackCard;

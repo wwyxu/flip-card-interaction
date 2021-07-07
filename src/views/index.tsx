@@ -18,7 +18,7 @@ const FlipCards = () => {
             type="introduction"
             />
         );
-    }
+    };
 
     const renderConclusion = () => {
         if (active > Data.flipCards.length) {
@@ -30,10 +30,10 @@ const FlipCards = () => {
                 type="conclusion"
                 />
             );
-        }
+        };
 
         return null;
-    }
+    };
 
     return (
         <div className="container">
@@ -45,6 +45,6 @@ const FlipCards = () => {
             {renderConclusion()}
         </div>
     );
-}
+};
 
 export default FlipCards;

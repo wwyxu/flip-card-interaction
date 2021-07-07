@@ -12,6 +12,6 @@ const FrontCard = ({ title, asset, theme }: Front) => {
         <p className={`front-header mt-3 ${theme}`}>{title}</p>
         </>
   );
-}
+};
 
 export default FrontCard;

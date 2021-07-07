@@ -20,6 +20,6 @@ const InfoCard = ({asset, title, description, type}: Info) => {
       </div>
     </div>
   );
-}
+};
 
 export default InfoCard;

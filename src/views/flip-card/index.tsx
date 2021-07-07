@@ -21,8 +21,8 @@ const FlipCard = ({ flipCard, active, setActive }: Card) => {
 
         if (active > flipCard.id) {
             setIsFlipped(!isFlipped);
-        }
-    }
+        };
+    };
 
     const renderFront = () => {
         return (
@@ -31,8 +31,8 @@ const FlipCard = ({ flipCard, active, setActive }: Card) => {
                 asset={flipCard.front.asset}
                 theme={active >= flipCard.id ? 'front-enabled' : 'front-disabled'}
             />
-        )
-    }
+        );
+    };
 
     const renderBack = () => {
         return (
@@ -41,8 +41,8 @@ const FlipCard = ({ flipCard, active, setActive }: Card) => {
                 description={flipCard.back.description}
                 asset={flipCard.back.asset}
             />
-        )
-    }
+        );
+    };
 
     const renderReturnIndicator = () => {
         if (isFlipped) return null;
@@ -53,13 +53,13 @@ const FlipCard = ({ flipCard, active, setActive }: Card) => {
                 <img className="bottom-right" alt="marker" src="assets/back_arrow.png" width="20" height="20" />
             </>
         );
-    }
+    };
 
     const renderCompletionIndicator = () => {
         return (
             <img className="top-right" src={complete ? "assets/complete.png" : "assets/incomplete.png"} alt="marker" width="20" height="20" />
         );
-    }
+    };
 
     return (
         <div className="flip-container">
@@ -80,6 +80,6 @@ const FlipCard = ({ flipCard, active, setActive }: Card) => {
             </div>
         </div>
     );
-}
+};
 
 export default FlipCard;
