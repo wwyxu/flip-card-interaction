@@ -63,7 +63,7 @@ const FlipCard = ({ flipCard, active, setActive }: Card) => {
 
     return (
         <div className="flip-container">
-            <div className={`${isFlipped ? "" : "selected"}`}>
+            <div className={`${isFlipped ? "" : "selected"} ${active >= flipCard.id ? "pointer" : ""}`}>
                 <div className="flipper">
                     <div className={`card ${isFlipped ? "" : "blue-background"}`} onClick={() => handleClick()}>
                         <div className="front">
