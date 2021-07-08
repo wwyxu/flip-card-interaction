@@ -93,11 +93,19 @@ h4 {
 }
 
 /* Front */
-
-.img-front {
+.front-dot {
+  height: 150px;
+  width: 150px;
   background-color: rgb(238, 238, 238);
-  border-radius: 100px;
-  padding: 30px;
+  border-radius:  50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.front-img-center {
+  text-align: center;
+  vertical-align: middle;
 }
 
 .front-header {
@@ -125,9 +133,24 @@ hr {
   padding: 0;
 }
 
+.back-dot {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(255, 255, 255);
+  border-radius:  50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-img-center {
+  text-align: center;
+  vertical-align: middle;
+}
+
 .img-back {
   background-color: rgb(255, 255, 255);
-  border-radius: 100px;
+  border-radius:  50%;
   padding: 20px;
 }
 

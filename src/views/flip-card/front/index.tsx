@@ -8,7 +8,9 @@ interface Front extends Models.Front {
 const FrontCard = ({ title, asset, theme }: Front) => {
   return (
         <>
-        <img className="img-front center" style={{ marginTop: "30px" }} alt={asset} src={asset} width="150" height="150"/>
+        <div className="front-dot center mt-4">
+        <img className="front-img-center center" alt={asset} src={asset} width="100" height="100"/>
+        </div>
         <p className={`front-header mt-3 ${theme}`}>{title}</p>
         </>
   );
