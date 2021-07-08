@@ -205,4 +205,12 @@ hr {
 
 .back {
   transform: rotateY(180deg);
+
+  -webkit-transform: rotateY(-180deg);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+
+	-moz-transform: rotateY(-180deg);
+	-moz-transform-style: preserve-3d;
+	-moz-backface-visibility: hidden;
 }
