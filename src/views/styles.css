@@ -191,26 +191,22 @@ hr {
 
 .front,
 .back {
-  backface-visibility: hidden;
-
-  position: absolute;
-  top: 0;
-  left: 0;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	position: absolute;
 }
 
 .front {
-  z-index: 2;
   transform: rotateY(0deg);
 }
 
 .back {
-  transform: rotateY(180deg);
-
-  -webkit-transform: rotateY(-180deg);
-  -webkit-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-
-  -moz-transform: rotateY(-180deg);
-  -moz-transform-style: preserve-3d;
-  -moz-backface-visibility: hidden;
+		transform: rotateY(180deg);
+		-webkit-transform: rotateY(-180deg);
+		-webkit-transform-style: preserve-3d;
+		-webkit-backface-visibility: hidden;
+		-moz-transform: rotateY(-180deg);
+		-moz-transform-style: preserve-3d;
+		-moz-backface-visibility: hidden;
 }

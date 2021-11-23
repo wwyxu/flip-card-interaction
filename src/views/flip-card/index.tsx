@@ -62,10 +62,9 @@ const FlipCard = ({ flipCard, active, setActive }: Card) => {
     };
 
     return (
-        <div className="flip-container">
+        <div className="flip-container" onClick={() => handleClick()}>
             <div className={`${isFlipped ? "" : "selected"} ${active >= flipCard.id ? "pointer" : ""}`}>
-                <div className="flipper">
-                    <div className={`card ${isFlipped ? "" : "blue-background"}`} onClick={() => handleClick()}>
+                <div className={`card flipper ${isFlipped ? "" : "blue-background"}`}>
                         <div className="front">
                             {renderCompletionIndicator()}
                             {renderFront()}
@@ -75,7 +74,6 @@ const FlipCard = ({ flipCard, active, setActive }: Card) => {
                             {renderBack()}
                             {renderReturnIndicator()}
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
